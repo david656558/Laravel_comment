@@ -17,9 +17,10 @@ class Comment extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function replies()
+
+    public function commentable()
     {
-        return $this->hasMany(Post::class, 'parent_id');
+        return $this->morphTo();
     }
 }
 

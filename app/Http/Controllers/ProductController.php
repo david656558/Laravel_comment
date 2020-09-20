@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 
-class PostController extends Controller
+class ProductController extends Controller
 {
     public function __construct()
     {
@@ -16,14 +16,14 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::all();
+        $products = Product::all();
 
-        return view('post.index', compact('posts'));
+        return view('product.indexproduct', compact('products'));
     }
 
     public function create()
     {
-        return view('post.create');
+        return view('product.createproduct');
     }
 
     public function store(Request $request)
@@ -35,12 +35,12 @@ class PostController extends Controller
 
         if ($validator->fails()) {
 
-            return redirect('post')
+            return redirect('product')
                 ->withErrors($validator)
                 ->withInput();
         }
 
-        Post::create([
+        Product::create([
             'title' => $request->title,
             'slug' => \Str::slug($request->title)
         ]);
@@ -51,20 +51,22 @@ class PostController extends Controller
 
     public function show($id)
     {
-        $post = Post::findOrFail($id);
+        $product = Product::findOrFail($id);
+        $comments = $product->comments;
 
-        $comments = $post->comments;
-
-        return view('post.single', compact('post', 'comments'));
+        return view('product.singleproduct', compact('product', 'comments'));
 
     }
 
     public function comment(Request $request)
     {
-        $post = Post::findOrFail($request->post_id);
-        $post->comments()->create(['comment' => $request->comment, 'user_id' => $request->user()->id]);
+        $product = Product::findOrFail($request->product_id);
+        $product->comments()->create(['comment' => $request->comment, 'user_id' => $request->user()->id]);
 
-        return back();
+
+        return redirect()->back();
 
     }
+
+
 }

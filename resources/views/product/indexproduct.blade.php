@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -11,13 +12,12 @@
                     <th>Action</th>
                     </thead>
                     <tbody>
-                    @foreach($posts as $post)
+                    @foreach($products as $product)
                         <tr>
-                            <td>{{ $post->id }}</td>
-                            <td>{{ $post->title }}</td>
+                            <td>{{ $product->id }}</td>
+                            <td>{{ $product->title }}</td>
                             <td>
-                                <a href="{{ route('post.show',$post->id) }}" class="btn btn-sm btn-outline-danger py-0"
-                                   style="font-size: 0.8em;">Read Post</a>
+                                <a href="{{ route('product.show',$product->id) }}" class="btn btn-sm btn-outline-danger py-0" style="font-size: 0.8em;">Read Product</a>
                             </td>
                         </tr>
                     @endforeach

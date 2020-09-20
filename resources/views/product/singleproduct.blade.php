@@ -10,8 +10,8 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <h3>Post</h3>
-                        <p>{{ $post->title }}</p>
+                        <h3>Product</h3>
+                        <p>{{ $product->title }}</p>
                     </div>
                     <hr>
                     <div class="card-body">
@@ -32,11 +32,11 @@
 
                     <div class="card-body">
                         <h5>Leave a comment</h5>
-                        <form method="post" action="{{ route('post.comment') }}">
+                        <form method="post" action="{{ route('product.comment') }}">
                             @csrf
                             <div class="form-group">
                                 <input type="text" name="comment" class="form-control"/>
-                                <input type="hidden" name="post_id" value="{{ $post->id }}"/>
+                                <input type="hidden" name="product_id" value="{{ $product->id }}"/>
                             </div>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-sm btn-outline-danger py-0"

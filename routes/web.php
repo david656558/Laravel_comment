@@ -23,11 +23,18 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('post', [App\Http\Controllers\PostController::class, 'create'])->name('post.create');
-Route::post('post', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
+//Post
 Route::get('/posts', [App\Http\Controllers\PostController::class,'index'])->name('posts');
+Route::get('/post', [App\Http\Controllers\PostController::class, 'create'])->name('post.create');
 Route::get('/article/{id?}', [App\Http\Controllers\PostController::class, 'show'])->name('post.show');
-Route::post('/comment/store', [App\Http\Controllers\CommentController::class, 'store'])->name('comment.add');
-Route::post('/reply/store', [App\Http\Controllers\CommentController::class, 'replyStore'])->name('reply.add');
+Route::post('/post', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
+Route::post('/post/comment/store', [App\Http\Controllers\PostController::class, 'comment'])->name('post.comment');
+
+//Product
+Route::get('/products', [App\Http\Controllers\ProductController::class,'index'])->name('products');
+Route::get('/product', [App\Http\Controllers\ProductController::class, 'create'])->name('product.create');
+Route::get('/article_product/{id?}', [App\Http\Controllers\ProductController::class, 'show'])->name('product.show');
+Route::post('/product', [App\Http\Controllers\ProductController::class, 'store'])->name('product.store');
+Route::post('/product/comment/store', [App\Http\Controllers\ProductController::class, 'comment'])->name('product.comment');
 
 

@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="0761f6e8-aa7d-45f4-80d3-c9d5970e9579" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_18_082706_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_18_082706_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/replys.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/post/single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/single.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +144,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -161,7 +168,7 @@
       <workItem from="1600413474582" duration="364000" />
       <workItem from="1600511018107" duration="3377000" />
       <workItem from="1600532428052" duration="868000" />
-      <workItem from="1600590003768" duration="5423000" />
+      <workItem from="1600590003768" duration="22546000" />
     </task>
     <servers />
   </component>
@@ -169,29 +176,21 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600513226409">
+    <state x="240" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600598912896">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1600513226409" />
-    <state x="347" y="155" width="586" height="490" key="find.popup" timestamp="1600513151465">
+    <state x="240" y="65" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1600598912896" />
+    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600628398460">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="347" y="155" width="586" height="490" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1600513151465" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/PostController.php</url>
-          <line>20</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/PostController.php</url>
-          <line>55</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="378" y="162" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.800@0.0.1280.800" timestamp="1600628398460" />
+    <state width="221" height="457" key="HiddenNamespacesPopup" timestamp="1600598857452">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="221" height="457" key="HiddenNamespacesPopup/0.0.1280.800@0.0.1280.800" timestamp="1600598857452" />
+    <state x="347" y="155" width="586" height="490" key="find.popup" timestamp="1600600856298">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="347" y="155" width="586" height="490" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1600600856298" />
   </component>
 </project>
