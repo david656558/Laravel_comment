@@ -53,7 +53,9 @@ class PostController extends Controller
 
     public function show($id) {
         $post=Post::findOrFail($id);
-        $comments = Comment::all();
+//        $comments = Comment::all();
+        $comments = Comment::where('parent_id', $id)->get();
+
         return view('post.single',compact('post', 'comments'));
 
     }

@@ -18,13 +18,16 @@
                     <div class="card-body">
                         <h3>Comments</h3>
 
+
                         @foreach($comments as $comment)
                             <tr>
-                                <td>{{ $comment->id }}</td>
+                                <td>{{ $comment->parent_id }}</td>
                                 <td>{{ $comment->comment }}</td>
                                 <br><hr>
                             </tr>
                         @endforeach
+
+
 
                     </div>
 
